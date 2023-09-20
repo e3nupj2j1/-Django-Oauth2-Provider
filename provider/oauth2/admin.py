@@ -46,11 +46,8 @@ class RefreshTokenAdmin(admin.ModelAdmin):
         "access_token",
         "client",
         "expired",
-        "created",
-        "modified",
     )
     raw_id_fields = ("user", "access_token", "client")
-    readonly_fields = ("created", "modified")
 
 
 class GrantAdmin(admin.ModelAdmin):
