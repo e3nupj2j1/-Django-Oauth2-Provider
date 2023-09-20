@@ -31,10 +31,13 @@ class AccessTokenAdmin(admin.ModelAdmin):
         "scope",
         "created",
         "modified",
-        refresh_token_url,
     )
     raw_id_fields = ("user",)
-    readonly_fields = ("created", "modified")
+    readonly_fields = (
+        "created",
+        "modified",
+        refresh_token_url,
+    )
     search_fields = ["user__username"]
     list_filter = ["client"]
 
